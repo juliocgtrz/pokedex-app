@@ -11,7 +11,10 @@ let pokemonList = [ //data for pokedex
     {name: 'Pikachu', number: 25, height: 0.4, type: 'electric'}
 ];
 
-//this will write out each pokemon's name on the webpage with a space in between
+//this will write out each pokemon's name on the webpage with a space in between and a message next to the pokemon fitting the conditional
 for (let i = 0; i < pokemonList.length; i++){
-    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') ');
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')' + '<br>');
+    if (pokemonList[i].height > 1) {
+        document.write(' - Wow, that\'s big!' + '<br>');
+    }
 }
