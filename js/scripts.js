@@ -4,5 +4,9 @@ let pokemonList = [ //data for pokedex
     {name: 'Squirtle', number: 7, height: 5, type: 'water'},
     {name: 'Caterpie', number: 10, height: 3, type: 'bug'},
     {name: 'Weedle', number: 13, height: 3, type: ['bug', 'poison']},
-    {name: 'Pidgey', number: 16, height: 3, type: ['flying', 'normal']}
+    {name: 'Pidgey', number: 16, height: 3, type: ['flying', 'normal']},
+    {name: 'Rattata', number: 19, height: 3, type: 'normal'},
+    {name: 'Spearow', number: 21, height: 3, type: ['flying', 'normal']},
+    {name: 'Ekans', number: 23, height: 2, type: 'poison'},
+    {name: 'Pikachu', number: 25, height: 4, type: 'electric'}
 ];
