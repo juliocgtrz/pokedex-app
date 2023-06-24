@@ -10,3 +10,8 @@ let pokemonList = [ //data for pokedex
     {name: 'Ekans', number: 23, height: 2, type: 'poison'},
     {name: 'Pikachu', number: 25, height: 4, type: 'electric'}
 ];
+
+//this will write out each pokemon's name on the webpage with a space in between
+for (let i = 0; i < pokemonList.length; i++){
+    document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') ');
+}
