@@ -20,15 +20,25 @@ let pokemonRepository = (function() {
     function add(pokemon) {
       pokemonList.push(pokemon);
     }
+
+    function addListItem(pokemon) {
+      let pokemonList = document.querySelector('.pokemon-list');
+      let listItem = document.createElement('li');
+      let button = document.createElement('button');
+      button.innerText = pokemon.name;
+      button.classList.add('pokemon-button');
+      listItem.appendChild(button);
+      pokemonList.appendChild(listItem);
+    }
   
     return {
       add: add,
-      getAll: getAll
+      getAll: getAll,
+      addListItem: addListItem
     };
   })();
-  // this code writes the name of each pokemon in a list with a break in between each pokemon name
+  // this code writes the name of each pokemon in a list
   pokemonRepository.getAll().forEach(function(pokemon) {
-    document.write(pokemon.name);
-    document.write('<br/>');
+    pokemonRepository.addListItem(pokemon);
   });
   
