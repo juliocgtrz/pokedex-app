@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+.pokemon-list {
+  list-style-type: none;
+}
+
+.pokemon-button {
+    /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: #d3d3d3;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+
+  /* adds spacing to the button */
+  padding: 16px;
+  border-radius: 3px;
+  margin: 4px 2px;
+  width: 75%;
+
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  transition-duration: 0.2s;
+  transition-property: opacity;
+
+}
+
+.pokemon-button:hover {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
