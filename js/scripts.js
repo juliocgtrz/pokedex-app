@@ -53,7 +53,14 @@ let pokemonRepository = (function () {
         // Now we add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
+        item.weight = details.weight;
         item.types = details.types;
+        if (details.types.length === 2) {
+          item.types[0] = details.types[0].type.name;
+          item.types[1] = details.types[1].type.name;
+        }else{
+          item.types[0] = details.types[0].type.name;
+        }
         showModal(item);
       }).catch(function (e) {
         console.error(e);
@@ -90,15 +97,23 @@ let pokemonRepository = (function () {
       imageElement.src = pokemon.imageUrl;
 
       let contentElement = document.createElement('p');
-      contentElement.innerText = 'Height: ' + pokemon.height;
+      contentElement.innerText = 'Height: ' + pokemon.height + ' m';
+
+      let weightElement = document.createElement('p');
+      contentElement.innerText = 'Weight: ' + pokemon.weight + ' kg';
 
       let typesElement = document.createElement('p');
-      typesElement.innerText = 'Type(s): ' + pokemon.types;
+      if (pokemon.types.length === 2) {
+        typesElement.innerText = 'Type(s): ' + pokemon.types[0] + ', ' + pokemon.types[1];
+      }else{
+        typesElement.innerText = 'Type(s): ' + pokemon.types;
+      }
 
       modal.appendChild(closeButtonElement);
       modal.appendChild(titleElement);
       modal.appendChild(imageElement);
       modal.appendChild(contentElement);
+      modal.appendChild(weightElement);
       modal.appendChild(typesElement);
       modalContainer.appendChild(modal);
 
