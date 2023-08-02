@@ -99,8 +99,8 @@ let pokemonRepository = (function () {
       let contentElement = document.createElement('p');
       contentElement.innerText = 'Height: ' + pokemon.height + ' m';
 
-      let weightElement = document.createElement('p');
-      contentElement.innerText = 'Weight: ' + pokemon.weight + ' kg';
+      // let weightElement = document.createElement('p');
+      // contentElement.innerText = 'Weight: ' + pokemon.weight + ' kg';
 
       let typesElement = document.createElement('p');
       if (pokemon.types.length === 2) {
@@ -113,7 +113,7 @@ let pokemonRepository = (function () {
       modal.appendChild(titleElement);
       modal.appendChild(imageElement);
       modal.appendChild(contentElement);
-      modal.appendChild(weightElement);
+      // modal.appendChild(weightElement);
       modal.appendChild(typesElement);
       modalContainer.appendChild(modal);
 
