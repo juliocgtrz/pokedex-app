@@ -16,7 +16,7 @@ let pokemonRepository = (function () {
       let listItem = document.createElement('li');
       let button = document.createElement('button');
       listItem.classList.add('list-group-item', 'row', 'bg-transparent', 'border-0');
-      button.innerText = pokemon.name;
+      button.innerText = capitalize(pokemon.name);
       button.classList.add('btn', 'btn-primary', 'btn-lg', 'pokemon-button');
       button.setAttribute("data-target", "#modal-container");
       button.setAttribute("data-toggle", "modal");
@@ -76,6 +76,11 @@ let pokemonRepository = (function () {
       });
     }
 
+    // This code allows for the pokemon names to be capitalized
+    function capitalize(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
     // This code displays the modal with pokemon details
     function showModal(pokemon) {
       let modalBody = $(".modal-body");
@@ -87,7 +92,7 @@ let pokemonRepository = (function () {
       modalBody.empty();
 
       // Add the name of the pokemon in the modal
-      let titleElement = $("<h1>" + pokemon.name + "</h1>");
+      let titleElement = $("<h1>" + capitalize(pokemon.name) + "</h1>");
       // Add the iamge of the pokemon in the modal
       let imageElement = $('<img class="modal-img" style="width:50%">');
       imageElement.attr("src", pokemon.imageUrl);
