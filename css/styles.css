@@ -7,6 +7,15 @@ body {
   text-align: center;
 }
 
+/* search bar */
+.col-12 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 15px;
+}
+
 .pokemon-list {
   display: flex;
   flex-direction: row;
