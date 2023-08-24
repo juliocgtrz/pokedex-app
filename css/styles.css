@@ -11,8 +11,9 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 15px;
+  justify-content: space-evenly;
+  margin: 10px;
+  gap: 15px;
 }
 
 .pokemon-button {
