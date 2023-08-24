@@ -22,16 +22,16 @@ let pokemonRepository = (function () {
       button.setAttribute("data-toggle", "modal");
       listItem.appendChild(button);
       pokemonList.appendChild(listItem);
-      //Event listener for clicks on a specific pokemon which will show that pokemon's details specified in the showDetials function
+      // Event listener for clicks on a specific pokemon which will show that pokemon's details specified in the showDetials function
       button.addEventListener('click', function() {
         showDetails(pokemon);
       });
     }
-    //Loads the details for the modal
+    // Loads the details for the modal
     function showDetails(pokemon) {
       loadDetails(pokemon);
     }
-    // this code is used to fetch data in the respository
+    // This code is used to fetch data in the respository
     function loadList() {
       return fetch(apiUrl).then(function (response) {
         return response.json();
@@ -47,13 +47,13 @@ let pokemonRepository = (function () {
         console.error(e);
       })
     }
-    //  this code loads the details of the item
+    //  This code loads the details of the item
     function loadDetails(item) {
       let url = item.detailsUrl;
       return fetch(url).then(function (response) {
         return response.json();
       }).then(function (details) {
-        // Now we add the details to the item
+        // Details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
         item.weight = details.weight;
@@ -69,7 +69,7 @@ let pokemonRepository = (function () {
         console.error(e);
       });
     }
-    // this code logs the details in the console
+    // This code logs the details in the console
     function showDetails(pokemon) {
       loadDetails(pokemon).then(function () {
         console.log(pokemon);
@@ -94,7 +94,7 @@ let pokemonRepository = (function () {
       // Add the name of the pokemon in the modal
       let titleElement = $("<h1>" + capitalize(pokemon.name) + "</h1>");
       // Add the iamge of the pokemon in the modal
-      let imageElement = $('<img class="modal-img" style="width:50%">');
+      let imageElement = $('<img class="modal-img" style="width:50% height:50%">');
       imageElement.attr("src", pokemon.imageUrl);
       // Add the height of the pokemon in the modal
       let heightElement = $("<p>" + "Height: " + pokemon.height + " m" + "</p>");
@@ -128,9 +128,18 @@ let pokemonRepository = (function () {
     };
   })();
 
+  // Code to filter list based on entry in search bar
+  $(document).ready(function(){
+    $("#searchBar").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $(".pokemon-list li").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
   pokemonRepository.loadList().then(function() {
-    // Now the data is loaded!
-    // this code writes the name of each pokemon in a list
+    // This code writes the name of each pokemon in a list
     pokemonRepository.getAll().forEach(function(pokemon) {
       pokemonRepository.addListItem(pokemon);
     });
