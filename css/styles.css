@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+body {
+  background-color: #dc041b;
+  text-align: center;
+}
+
 .pokemon-list {
   list-style-type: none;
 }
@@ -62,12 +67,9 @@
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
   padding: 15px;
   width: 100%;
-  max-width: 600px;
   height: 100%;
-  max-height: 600px;
   text-align: center;
   border-radius: 10px;
 }
@@ -76,9 +78,31 @@
   float: right;
   border: 0;
   background: none;
-  color: #777;
+  color: #d3d3d3;
   text-decoration: underline;
   cursor: pointer;
+}
+
+button.close {
+  background-color: transparent;
+  border: 0;
+  appearance: none;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.modal-header {
+  background: #d3d3d3;
+  color: #000;
+}
+
+.btn-secondary {
+  background-color: #d3d3d3;
+  border: none;
+  color: #000;
 }
 
 .modal h1 {
