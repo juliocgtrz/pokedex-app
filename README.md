@@ -8,11 +8,13 @@ On user action (e.g., by clicking on a list item), view details for that item
 Filtering list of items via search bar
 
 Dependencies
-PokéAPI
-jQuery
-Popper.js
-Bootstrap
-Promise polyfill
-Fetch polyfill
-ESLint
-Prettier
+<ul>
+  <li>PokéAPI</li>
+  <li>jQuery</li>
+  <li>Popper.js</li>
+  <li>Bootstrap</li>
+  <li>Promise polyfill</li>
+  <li>Fetch polyfill</li>
+  <li>ESLint</li>
+  <li>Prettier</li>
+</ul>
