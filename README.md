@@ -1,7 +1,5 @@
 <h1>The Pokedex Javascript App.</h1>
-<pre>
-  The objective of this project was to build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
-</pre>
+The objective of this project was to build a small web application with HTML, CSS, and JavaScript that loads data from an external API and enables the viewing of data points in detail.
 
 <h2>Key Features</h2>
 Load data from an external source (API)
