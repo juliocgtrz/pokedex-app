@@ -9,14 +9,22 @@ The objective of this project was to build a small web application with HTML, CS
   <li>Filtering list of items via search bar</li>
 </ul>
 
-<h2>Dependencies</h2>
+<h2>Technologies</h2>
 <ul>
-  <li>PokéAPI</li>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
   <li>jQuery</li>
-  <li>Popper.js</li>
   <li>Bootstrap</li>
-  <li>Promise polyfill</li>
-  <li>Fetch polyfill</li>
+  <li>Fetch API</li>
+  <li>Promises</li>
   <li>ESLint</li>
   <li>Prettier</li>
 </ul>
+
+<h2>Getting Started</h2>
+<ol>
+  <li>Clone the repository: https://github.com/juliocgtrz/pokedex-app.git</li>
+  <li>Open the index.html file in your preferred browser.</li>
+  <li>Explore the pokemon database web app.</li>
+</ol>
